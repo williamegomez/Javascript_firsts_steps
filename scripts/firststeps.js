@@ -41,7 +41,7 @@ export function functionalMapNumbersIntoStrings(CArray){
 }
 
 export function printType(variable){
-    return typeof(variable);
+    console.log(typeof(variable));
 }
 
 export function isPalindrome(CArray){
