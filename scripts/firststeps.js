@@ -1,6 +1,4 @@
-
-
-function generateRandomColor(){
+export function generateRandomColor(){
     var R = Math.floor(Math.random()*255)+1;
     var G = Math.floor(Math.random()*255)+1;
     var B = Math.floor(Math.random()*255)+1;
@@ -11,7 +9,8 @@ function generateRandomColor(){
     }
 }
 
-function filterNegativeNumbers(CArray){
+
+export function filterNegativeNumbers(CArray){
     var ArraytoFilter = CArray;
     var Filtered = new Array;
     for(var i=0;i<ArraytoFilter.length;i++){
@@ -22,12 +21,12 @@ function filterNegativeNumbers(CArray){
     return Filtered;
 }
 
-function FunctionalfilterNegativeNumbers(CArray){
+export function functionalFilterNegativeNumbers(CArray){
     var ArraytoFilter = CArray;
     return ArraytoFilter.filter(number => number >= 0);
 }
 
-function mapNumbersIntoStrings(CArray){
+export function mapNumbersIntoStrings(CArray){
     var ArraytoFilter = CArray;
     var Filtered = new Array;
     for(var i=0;i<ArraytoFilter.length;i++){
@@ -36,16 +35,16 @@ function mapNumbersIntoStrings(CArray){
     return Filtered;
 }
 
-function FunctionalmapNumbersIntoStrings(CArray){
+export function functionalMapNumbersIntoStrings(CArray){
     var ArraytoFilter = CArray;
     return ArraytoFilter.map(number => number.toString());
 }
 
-function printType(variable){
+export function printType(variable){
     return typeof(variable);
 }
 
-function isPalindrome(CArray){
+export function isPalindrome(CArray){
     var ArraytoCheck = CArray;
     var ispal = true;
     for(var i=0;i<Math.floor(ArraytoCheck.length/2);i++){
@@ -56,7 +55,7 @@ function isPalindrome(CArray){
     return ispal;
 }
 
-class Person{
+export class Person{
     constructor(name,age){
         this.name = name;
         this.age = age;
@@ -67,11 +66,6 @@ class Person{
     }
 }
 
-var student = new Person("John",25);
-student.printName();
-
-function printOutPersonAge(Personita){
+export function printOutPersonAge(Personita){
     console.log(Personita.name);
 }
-
-printOutPersonAge(student);
