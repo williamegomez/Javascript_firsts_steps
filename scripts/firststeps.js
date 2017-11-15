@@ -46,6 +46,7 @@ export function printType(variable){
 
 export function isPalindrome(CArray){
     var ArraytoCheck = CArray;
+    ArraytoCheck= ArraytoCheck.toLowerCase();
     var ispal = true;
     for(var i=0;i<Math.floor(ArraytoCheck.length/2);i++){
         if(ArraytoCheck[i] !=  ArraytoCheck[ArraytoCheck.length-i-1]){
