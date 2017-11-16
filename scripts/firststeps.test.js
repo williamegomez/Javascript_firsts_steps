@@ -159,7 +159,44 @@ describe('isPalindrome', () => {
         expect(isPalindrome("mad,am")).toEqual(true);
     });
 
+    it('Should remove spaces', () => {
+        expect(isPalindrome("mad am")).toEqual(true);
+    });
+
     it('Should work with uppercase and lowercase', () => {
         expect(isPalindrome("maDAm")).toEqual(true);
+    });
+});
+
+describe('Person', () => {
+    it('Should have two properties', () => {
+        expect(Object.keys(new Person('',0))).toHaveLength(2);
+    });
+
+    it('Should have a property called name and a property called age', () => {
+        expect(new Person('',0)).toHaveProperty('name');
+        expect(new Person('',0)).toHaveProperty('age');
+    });
+
+    it('Should have a string property called name and a number property called age', () => {
+        let student = new Person('',0);
+        expect(typeof(student.name)).toEqual('string');
+        expect(typeof(student.age)).toEqual('number');
+    });
+});
+
+describe('printOutPersonAge', () => {
+    it('Should print the age of an object of class person', () => {
+
+        var student = new Person('Carlos',28);
+        
+        global.console = {
+            warn: jest.fn(),
+            log: jest.fn()
+        }
+
+        printOutPersonAge(student);
+          
+        expect(global.console.log).toHaveBeenCalledWith(student.age);
     });
 });

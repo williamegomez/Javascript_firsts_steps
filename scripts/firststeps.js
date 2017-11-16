@@ -45,8 +45,9 @@ export function printType(variable){
 }
 
 export function isPalindrome(CArray){
-    var ArraytoCheck = CArray;
-    ArraytoCheck= ArraytoCheck.toLowerCase();
+    var ArraytoCheck = new String(CArray);
+    ArraytoCheck = ArraytoCheck.toLowerCase();
+    ArraytoCheck = ArraytoCheck.replace(/[^a-zA-Z]/g, "");
     var ispal = true;
     for(var i=0;i<Math.floor(ArraytoCheck.length/2);i++){
         if(ArraytoCheck[i] !=  ArraytoCheck[ArraytoCheck.length-i-1]){
@@ -68,5 +69,5 @@ export class Person{
 }
 
 export function printOutPersonAge(Personita){
-    console.log(Personita.name);
+    console.log(Personita.age);
 }
