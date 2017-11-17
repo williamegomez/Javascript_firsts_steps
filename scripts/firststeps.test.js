@@ -67,8 +67,9 @@ describe('filterNegativeNumbers', () => {
 
     it('Should not modify input array', () => {
         var array1 = [1,2,3,-3,-4];
+        let array2 = new Array(array1);
         filterNegativeNumbers(array1);
-        expect(array1).toEqual([1,2,3,-3,-4]);
+        expect(array1).toEqual(array2[0]);
     });
 
 });
@@ -191,7 +192,6 @@ describe('printOutPersonAge', () => {
         var student = new Person('Carlos',28);
         
         global.console = {
-            warn: jest.fn(),
             log: jest.fn()
         }
 
