@@ -19,6 +19,7 @@ export function filterNegativeNumbers(CArray){
         }
     }
     return Filtered;
+    
 }
 
 export function functionalFilterNegativeNumbers(CArray){
